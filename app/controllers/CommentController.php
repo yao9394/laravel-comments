@@ -1,6 +1,6 @@
 <?php
 
-class CommentController extends \BaseController {
+class CommentController extends BaseController {
 
 	/**
 	 * Display a listing of the resource.
@@ -24,7 +24,7 @@ class CommentController extends \BaseController {
             'author' => Input::get('author'),
             'text' => Input::get('text')
         ));
-    
+
         return Response::json(array('success' => true));
 	}
 
@@ -38,7 +38,7 @@ class CommentController extends \BaseController {
 	public function destroy($id)
 	{
 		Comment::destroy($id);
-    
+
         return Response::json(array('success' => true));
 	}
 
